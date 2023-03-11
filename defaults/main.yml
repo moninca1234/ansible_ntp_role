@@ -1,0 +1,2 @@
+temp_src: templates/chrony.conf.j2
+temp_des: /etc/chrony.conf

@@ -1,0 +1,7 @@
+galaxy_info:
+  role_name: chrony
+  author: monica
+  description: install and configure chrony 
+  license: license (GPLv2, CC-BY, etc)
+
+  min_ansible_version: 1.2

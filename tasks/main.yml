@@ -1,0 +1,20 @@
+---
+- name: Install chrony package
+  yum:
+   name: chrony
+   state: present
+- name: Configure chrony
+  template:
+   src: "{{ temp_src }}"
+   dest: "{{ temp_des }}"
+  notify: restart ntpd
+- name: Start NTP service
+  service:
+   name: chronyd
+   state: started
+   enabled: yes
+    #- name: Set Timezone
+    # timezone:
+    # name: Africa/Cairo
+    #state: present
+
